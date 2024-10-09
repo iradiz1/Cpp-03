@@ -13,15 +13,15 @@ int main() {
 
     clap.attack("target1");
     scav.attack("target2");
-    scav.attack("target3");
+    frag.attack("target3");
 
     clap.takeDamage(3);
     scav.takeDamage(20);
-    scav.takeDamage(15);
+    frag.takeDamage(15);
 
     clap.beRepaired(5);
     scav.beRepaired(10);
-    scav.beRepaired(8);
+    frag.beRepaired(8);
 
     frag.highFivesGuys();
 

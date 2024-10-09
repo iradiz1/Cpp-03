@@ -4,7 +4,7 @@ ClapTrap::ClapTrap() : _name("Defoult"), _hp(10), _energypoints(10), _attackdama
 	std::cout << "ClapTrap " << _name << " created by Default Constructor." << std::endl;
 }
 
-ClapTrap::ClapTrap(std::string &name) : _name(name), _hp(10), _energypoints(10), _attackdamage(0){
+ClapTrap::ClapTrap(std::string name) : _name(name), _hp(10), _energypoints(10), _attackdamage(0){
 	std::cout << "ClapTrap " << _name << " created by name Constructor." << std::endl;
 }
 
@@ -17,12 +17,15 @@ ClapTrap::~ClapTrap(){
 	std::cout << "ClapTrap " << _name << "  destroyed." << std::endl;
 }
 
-ClapTrap& ClapTrap::operator=(ClapTrap const &copy) {
+ClapTrap& ClapTrap::operator=(ClapTrap const &other) {
 	std::cout << "Assignment operator for ClapTrap called." << std::endl;
-	this->_name = copy._name;
-	this->_attackdamage = copy._attackdamage;
-	this->_energypoints = copy._energypoints;
-	this->_hp = copy._hp;
+	if (this != &other)
+	{
+		this->_name = other._name;
+		this->_attackdamage = other._attackdamage;
+		this->_energypoints = other._energypoints;
+		this->_hp = other._hp;
+	}
 	return *this;
 }
 

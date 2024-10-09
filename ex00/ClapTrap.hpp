@@ -1,12 +1,11 @@
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#pragma once
 
 #include <iostream>
 
 class ClapTrap{
 public:
 	ClapTrap();
-	ClapTrap(std::string &name);
+	ClapTrap(std::string name);
 	ClapTrap(ClapTrap const &copy);
 	~ClapTrap();
 	ClapTrap& operator=(const ClapTrap& other);
@@ -21,5 +20,3 @@ private:
 	int _energypoints;
 	int	_attackdamage;
 };
-
-#endif
